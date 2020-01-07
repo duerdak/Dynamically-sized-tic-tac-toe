@@ -9,8 +9,10 @@ def game_display(game_board):
 
 
 def win(game_board):
+    # Check if there is a victor
 
     def all_same(li):
+        # Check if a column, row or diagonal has the same value
         if li.count(li[0])==len(li) and li[0] != 0:
             return True
         else:
@@ -59,7 +61,6 @@ def game_move(game_board, player_move, col, row):
 
 
 play = True
-players = [1,2]
 while play:
     game_size = int(input("What size do you want your tic tac toe board to be? "))
     game_board = [[0 for i in range(game_size)] for i in range(game_size)]
